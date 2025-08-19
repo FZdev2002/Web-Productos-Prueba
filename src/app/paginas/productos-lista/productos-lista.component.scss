@@ -1,0 +1,140 @@
+.contenedor {
+  padding: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #1f2937;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.barra {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0 1.5rem;
+}
+
+.barra a {
+  text-decoration: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #d1d5db;
+  background: transparent;
+  color: #374151;
+  transition: background 0.2s, color 0.2s;
+}
+.barra a:hover {
+  background: #f9fafb;
+  color: #111827;
+}
+
+.barra button {
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  background: #2563eb;
+  color: #fff;
+  transition: background 0.2s;
+}
+.barra button:hover {
+  background: #1d4ed8;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.tabla th {
+  text-align: left;
+  background: #f9fafb;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tabla td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
+.tabla td.descripcion {
+  max-width: 250px;
+  color: #374151;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tabla tr:last-child td {
+  border-bottom: none;
+}
+
+.acciones {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.acciones button {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s;
+}
+
+.acciones button:first-child {
+  background: #f59e0b;
+  color: #fff;
+}
+.acciones button:first-child:hover {
+  background: #d97706;
+}
+
+.acciones button:last-child {
+  background: #dc2626;
+  color: #fff;
+}
+.acciones button:last-child:hover {
+  background: #b91c1c;
+}
+
+.alerta.error {
+  background: #fef2f2;
+  border: 1px solid #ef4444;
+  color: #991b1b;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 1rem;
+}

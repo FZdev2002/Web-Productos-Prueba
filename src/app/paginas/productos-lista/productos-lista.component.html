@@ -1,0 +1,41 @@
+<div class="contenedor">
+  <h2>Productos</h2>
+
+  <div class="barra">
+    <a routerLink="/categorias">Ir a Categorías</a>
+    <button (click)="nuevo()">Nuevo producto</button>
+  </div>
+
+  <div class="alerta error" *ngIf="error">{{ error }}</div>
+  <div *ngIf="cargando">Cargando...</div>
+
+  <table *ngIf="!cargando && productos.length" class="tabla">
+    <thead>
+      <tr>
+        <th>Imagen</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th>Categoría</th>
+        <th style="width: 170px;"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of productos">
+        <td>
+          <img *ngIf="p.imagenUrl" [src]="base + p.imagenUrl" width="70" height="70" style="object-fit:cover;border-radius:8px;">
+        </td>
+        <td>{{ p.nombre }}</td>
+        <td class="descripcion">{{ p.descripcion || '—' }}</td>
+        <td>{{ p.precio | number:'1.2-2' }}</td>
+        <td>{{ p.categoria?.nombre || '—' }}</td>
+        <td class="acciones">
+          <button (click)="editar(p.id!)">Editar</button>
+          <button (click)="eliminar(p.id!)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="!cargando && !productos.length">No hay productos registrados.</p>
+</div>

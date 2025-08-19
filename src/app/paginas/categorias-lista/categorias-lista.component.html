@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="header">
+    <h2>Categorías</h2>
+  </div>
+
+  <div class="card" style="margin-bottom:16px;">
+    <form [formGroup]="formulario" (ngSubmit)="crear()" class="form-grid">
+      <div class="form-item" style="grid-column: 1 / -1;">
+        <label>Nombre de categoría</label>
+        <input class="input" type="text" formControlName="nombre" placeholder="Ej: Electrónica" />
+        <small class="help" *ngIf="formulario.get('nombre')?.invalid && formulario.get('nombre')?.touched">
+          El nombre es requerido y máximo 80 caracteres.
+        </small>
+      </div>
+      <div class="actions" style="grid-column: 1 / -1;">
+        <button class="btn btn-primary" type="submit">Agregar</button>
+      </div>
+    </form>
+
+    <div class="alert ok" *ngIf="ok">{{ ok }}</div>
+    <div class="alert error" *ngIf="error">{{ error }}</div>
+  </div>
+
+  <div *ngIf="cargando" class="card">Cargando...</div>
+
+  <table *ngIf="!cargando && categorias.length" class="table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th style="width: 220px;"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of categorias">
+        <td>
+          <span *ngIf="editandoId !== c.id">{{ c.nombre }}</span>
+          <div *ngIf="editandoId === c.id" class="inline-edit">
+            <input class="input small" [formControl]="editControl" [disabled]="guardando" />
+            <small class="help" *ngIf="editControl.invalid && editControl.touched">
+              Requerido (máx. 80).
+            </small>
+          </div>
+        </td>
+        <td class="acciones">
+          <ng-container *ngIf="editandoId !== c.id; else edicionBotones">
+            <button class="btn btn-warning" (click)="iniciarEdicion(c)">Editar</button>
+            <button class="btn btn-danger" (click)="eliminar(c.id)">Eliminar</button>
+          </ng-container>
+          <ng-template #edicionBotones>
+            <button class="btn btn-primary" [disabled]="guardando" (click)="guardarEdicion(c.id)">Guardar</button>
+            <button class="btn btn-ghost" [disabled]="guardando" (click)="cancelarEdicion()">Cancelar</button>
+          </ng-template>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="!cargando && !categorias.length" class="help">No hay categorías registradas.</p>
+</div>
