@@ -1,0 +1,264 @@
+{
+	"info": {
+		"_postman_id": "7ba6ea54-3d74-4e13-b78c-a85a3ae4efbd",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30445405",
+		"_collection_link": "https://www.postman.com/restless-crescent-260827/prueba-api/collection/ac6vhse/new-collection?action=share&source=collection_link&creator=30445405"
+	},
+	"item": [
+		{
+			"name": "Crear una categoría",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Electrónica\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/categorias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar categorías",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/categorias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Mouse gamer\",\r\n  \"descripcion\": \"RGB, ergonómico\",\r\n  \"precio\": 150.50,\r\n  \"categoriaId\": \"da2dc3ff-2c82-424d-8422-cf7cd1b09d34\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver un producto por id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/productos/43cfed18-8df2-4bef-9e6a-b56541b5698d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"productos",
+						"43cfed18-8df2-4bef-9e6a-b56541b5698d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar producto",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"descripcion\": \"Teclado mecánico con switches rojos\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/productos/43cfed18-8df2-4bef-9e6a-b56541b5698d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"productos",
+						"43cfed18-8df2-4bef-9e6a-b56541b5698d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar producto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/productos/28474de2-0bc9-490a-ab2c-e698cbdd814e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"productos",
+						"28474de2-0bc9-490a-ab2c-e698cbdd814e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear producto con imagen",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Teclado mecánico",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "350",
+							"type": "text"
+						},
+						{
+							"key": "categoriaId",
+							"value": "da2dc3ff-2c82-424d-8422-cf7cd1b09d34",
+							"type": "text"
+						},
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "descripcion",
+							"value": "teclado bonito",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar categoria",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Alimentos\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/categorias/8fdeb48f-e2e3-4244-b38e-8958d5f54d11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categorias",
+						"8fdeb48f-e2e3-4244-b38e-8958d5f54d11"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
