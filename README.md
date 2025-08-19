@@ -49,11 +49,9 @@ DB_NOMBRE=tienda
 - Crear una carpeta "uploads" pa la subida de imagenes
 
 
-5. Base de datos:
-CREATE DATABASE tienda CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+5. Crear Base de datos: CREATE DATABASE tienda CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-
-7. Levantar backend: npm run start:dev
+6. Levantar backend: npm run start:dev
 
 
 POSTMAN COLECTION: https://www.postman.com/restless-crescent-260827/prueba-api/collection/ac6vhse/new-collection?action=share&source=copy-link&creator=30445405
