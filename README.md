@@ -63,8 +63,8 @@ El código está en la rama frontend de este repo.
 
 1. Crear proyecto base:
 
-npm i -g @angular/cli
-ng new tienda-web --routing --style=scss
+- npm i -g @angular/cli
+- ng new tienda-web --routing --style=scss
 
 2. Copiar el contenido de src (de esta rama) en tu proyecto.
 3. Levantar frontend: ng serve -o
