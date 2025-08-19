@@ -14,20 +14,31 @@ nest new api-prueba
 2. Instalar dependencias:
 
 npm i @nestjs/typeorm typeorm mysql2
+
 npm i @nestjs/config
+
 npm i class-validator class-transformer
+
 npm i @nestjs/platform-express multer
+
 npm i -D @types/express @types/multer
 
 3. Configurar entorno: Crea un archivo .env en la raíz con el contenido
 
 PUERTO=3000
+
 DB_TIPO=mysql
+
 DB_HOST=localhost
+
 DB_PUERTO=3306
+
 DB_USUARIO=root
+
 DB_CLAVE=tu_clave
+
 DB_NOMBRE=tienda
+
 
 4. Configuración adicional:
 
