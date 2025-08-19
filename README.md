@@ -8,6 +8,7 @@ Prueba técnica Full-Stack: **API en NestJS + MySQL** y **Frontend en Angular** 
 1. Crear el proyecto:
 
 npm i -g @nestjs/cli
+
 nest new api-prueba
 
 2. Instalar dependencias:
