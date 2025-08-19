@@ -6,22 +6,20 @@ Prueba técnica Full-Stack: **API en NestJS + MySQL** y **Frontend en Angular** 
 ## Backend (NestJS + MySQL)
 
 1. Crear el proyecto:
-```bash
-npm i -g @nestjs/cli
-
-nest new api-prueba
+- npm i -g @nestjs/cli
+- nest new api-prueba
 
 2. Instalar dependencias:
 
-npm i @nestjs/typeorm typeorm mysql2
+- npm i @nestjs/typeorm typeorm mysql2
 
-npm i @nestjs/config
+- npm i @nestjs/config
 
-npm i class-validator class-transformer
+- npm i class-validator class-transformer
 
-npm i @nestjs/platform-express multer
+- npm i @nestjs/platform-express multer
 
-npm i -D @types/express @types/multer
+- npm i -D @types/express @types/multer
 
 3. Configurar entorno: Crea un archivo .env en la raíz con el contenido
 
@@ -42,16 +40,21 @@ DB_NOMBRE=tienda
 
 4. Configuración adicional:
 
-Crear src/configuracion/typeorm.config.ts (como en este repo).
-Editar src/app.module.ts (como en este repo).
-Ajustar main.ts (como en este repo).
-Crear una carpeta "uploads" pa la subida de imagenes
+- Crear src/configuracion/typeorm.config.ts (como en este repo).
+
+- Editar src/app.module.ts (como en este repo).
+
+- Ajustar main.ts (como en este repo).
+
+- Crear una carpeta "uploads" pa la subida de imagenes
+
 
 5. Base de datos:
 CREATE DATABASE tienda CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-6. Levantar backend: API disponible en http://localhost:3000
-npm run start:dev
+
+7. Levantar backend: npm run start:dev
+
 
 POSTMAN COLECTION: https://www.postman.com/restless-crescent-260827/prueba-api/collection/ac6vhse/new-collection?action=share&source=copy-link&creator=30445405
 
